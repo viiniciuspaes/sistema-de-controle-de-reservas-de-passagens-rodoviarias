@@ -23,6 +23,9 @@ class Reserva:
     def set_indisponivel(self):
         self.disponivel = False
 
+    def set_disponibilidade(self, disponibilidade):
+        self.disponivel = disponibilidade
+
     def set_cod_traj(self, cod):
         self.cod_trajetoria = cod
 

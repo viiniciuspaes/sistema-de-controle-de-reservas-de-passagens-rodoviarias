@@ -33,6 +33,22 @@ def execute_sql(sql):
         connection.close()
 
 
+def search_sql(sql):
+
+    connection = get_connection()
+    cursor = connection.cursor()
+    try:
+        cursor.execute(sql)
+        results = cursor.fetchall()
+        connection.close()
+        return results
+
+    except:
+        print("Error: Não foi possível buscar os dados")
+        connection.close()
+        return False
+
+
 def create_database():
     connection = pymysql.connect(host='localhost',
                                  user=user,
