@@ -30,6 +30,18 @@ def buscar_municipio(cod_mun):
         return municipio
 
 
+def buscar_municipio_nome(nome):
+    resultado = search_sql("SELECT * FROM Municipio WHERE Nome = {}".format(nome))
+
+    if len(resultado) == 0:
+        return None
+    else:
+        municipio = Municipio()
+        municipio.set_cod_mun(resultado[0][1])
+        municipio.set_nome(resultado[0][1])
+        return municipio
+
+
 def buscar_municipios(nome):
     resultado = search_sql("SELECT * FROM Empresa WHERE Nome LIKE %{}%".format(nome))
 

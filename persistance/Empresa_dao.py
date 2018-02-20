@@ -30,6 +30,18 @@ def buscar_empresa(cod_emp):
         return empresa
 
 
+def buscar_empresa_nome(nome):
+    resultado = search_sql("SELECT * FROM Empresa WHERE Nome = {}".format(nome))
+
+    if len(resultado) == 0:
+        return None
+    else:
+        empresa = Empresa()
+        empresa.set_cod_emp(resultado[0][0])
+        empresa.set_nome(resultado[0][1])
+        return empresa
+
+
 def buscar_empresas(nome):
     resultado = search_sql("SELECT * FROM Empresa WHERE Nome LIKE %{}%".format(nome))
 
