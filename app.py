@@ -48,6 +48,8 @@ Buttons.pack(side=BOTTOM)
 Buttons2 = Frame(Midle, width=300, height=100, bd=8, )
 Buttons.pack(side=BOTTOM)
 
+#TODO: necessaria novas subdivisoes dos frames de left midle e right para receberem um visualizador de dados
+
 
 # ==================================LABEL WIDGET=======================================
 txt_title = Label(Top, width=900, font=('arial', 12), text="Sistema de Cadastro de Reservas")
@@ -70,6 +72,8 @@ txt_cod_mun = Label(Forms, text="cod_mun",  font=('arial', 11), bd=15)
 txt_cod_mun.grid(row=7, stick="e")
 txt_cod_traj = Label(Forms, text='Cod_traj',  font=('arial', 11), bd=15)
 txt_cod_traj.grid(row=8, stick="e")
+
+#todo: nomes precisam ser removidos para que cada form tenha apenas os valores do seu objeto
 
 txt_empresa_nome2 = Label(Forms2, text="Empresa:", font=('arial', 11), bd=15)
 txt_empresa_nome2.grid(row=0, stick="e")
@@ -236,7 +240,7 @@ btn_delete2 = Button(Buttons2, width=10, text="Delete", state=DISABLED)
 btn_delete2.pack(side=LEFT)
 btn_exit2 = Button(Buttons2, width=10, text="Exit", command=DISABLED)
 btn_exit2.pack(side=LEFT)
-
+#Todo: bottons do segundo form nao aparecem
 # ==================================LIST WIDGET========================================
 scrollbary = Scrollbar(Right, orient=VERTICAL)
 scrollbarx = Scrollbar(Right, orient=HORIZONTAL)
@@ -260,6 +264,8 @@ tree.column('#4', stretch=NO, minwidth=0, width=150)
 tree.column('#5', stretch=NO, minwidth=0, width=120)
 tree.column('#6', stretch=NO, minwidth=0, width=120)
 tree.pack()
+
+#TODO: necessario um desse para cada area
 
 
 
