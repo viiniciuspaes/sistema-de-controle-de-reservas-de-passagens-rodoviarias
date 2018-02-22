@@ -216,7 +216,7 @@ def all_empresas(): #TODO: all para cada classe
         tree.insert('', 'end', values=(data[1], data[2], data[3], data[4], data[5], data[6]))
     cursor.close()
     connection.close()
-    t
+    
 
 # ==================================BUTTONS WIDGET=====================================
 btn_create = Button(Buttons, width=10, text="Create", command=DISABLED)
