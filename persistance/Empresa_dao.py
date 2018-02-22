@@ -16,6 +16,9 @@ def alterar_empresa(novo_nome, cod_emp):
     sql = "UPDATE Empresa SET Nome = {} WHERE CodEmp = {}".format(novo_nome, cod_emp)
     execute_sql(sql)
 
+def all_empresas():
+    sql = ""
+
 
 def buscar_empresa(cod_emp):
 

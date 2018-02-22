@@ -2,7 +2,7 @@ from database.DbHelper import execute_sql, search_sql
 from models.Trajeto import Trajeto
 
 
-def inserir_trajeto(cod_empresa, cod_municio, cod_municipio_dest, cod_municipio_orig, dia_semana, horario_partida,
+def inserir_trajeto(cod_empresa, cod_municipio_dest, cod_municipio_orig, dia_semana, horario_partida,
                     horario_chegada):
 
     sql = "INSERT INTO Trajeto_Horario(CodEmpresa, CodMunicio, CodMunicipioDest, DiaSemana," \

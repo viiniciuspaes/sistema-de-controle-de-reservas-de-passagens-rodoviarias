@@ -2,8 +2,9 @@ from database.DbHelper import execute_sql, search_sql
 from models.Reserva import Reserva
 
 
-def inserir_reserva(numero_assento, livre = 0):
-    sql = "INSERT INTO ReservaAssento(NumeroAssento, Livre)VALUES ({});".format(numero_assento, livre)
+def inserir_reserva(cod_traj, numero_assento, livre = 0):
+    sql = "INSERT INTO ReservaAssento(CodTrajetoHorario, NumeroAssento, Livre)VALUES ({}, {}, {}});"\
+        .format(cod_traj, numero_assento, livre)
     execute_sql(sql)
 
 
