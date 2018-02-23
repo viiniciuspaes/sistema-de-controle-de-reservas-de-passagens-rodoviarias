@@ -15,7 +15,8 @@ class Reserva:
         return self.numero_assento
 
     def is_disponivel(self):
-        return self.disponivel
+        if self.disponivel: return "Sim"
+        else: return "Não"
 
     def set_disponivel(self):
         self.disponivel = True
